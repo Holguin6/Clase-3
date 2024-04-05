@@ -1,20 +1,14 @@
-function calcularDescuento(monto) {
-    if (monto > 100) {
-        return monto * 0.1;
-    } else {
-        return monto * 0.02;
-    }
+var monto, descuento, precioFinal 
+
+function calcularDescuento (monto) {
+    if (monto>=100) {
+        return monto = 0.10
+     } else {
+        return monto = 0.20
+     }
 }
 
-function calcularYMostrarDescuento() {
-    var monto = parseFloat(prompt("Ingrese el monto:"));
-    if (!monto) {
-        alert("Por favor, ingrese un monto válido.");
-        return;
-    }
-    var descuento = calcularDescuento(monto);
-    var montoConDescuento = monto - descuento;
-    alert("El monto con descuento es: $" + montoConDescuento);
-}
+var monto = parseFloat(prompt("Ingrese el monto: "))
+var descuento = calcularDescuento (monto)
 
-calcularYMostrarDescuento();
+alert ("El descuento es de "+descuento)
